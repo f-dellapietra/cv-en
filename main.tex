@@ -1,0 +1,884 @@
+\documentclass[11pt,a4paper,sans,colorlinks,linkcolor=green]{moderncv}
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+
+%\usepackage{fontspec}
+\usepackage{amsmath,amssymb,needspace}
+\usepackage{lipsum}
+\usepackage[english]{babel} % Changed from italian to english
+
+%\makeatletter
+%\NewDocumentCommand{\mysubsection}{sm}{%
+%  \par\addvspace{1ex}%
+%  \phantomsection{}% reset the anchor for hyperrefs
+%  \addcontentsline{toc}{subsection}{#2}%
+%  {\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}\quad}{\strut\subsectionstyle{#2}}%
+%  \par\nobreak\addvspace{.5ex}\@afterheading}% to avoid a pagebreak after the heading
+%\makeatother
+
+\usepackage{amsmath,amssymb,moderncvbodyi}
+\usepackage{textcomp}
+%\usepackage{eurosym}
+\usepackage{comment}
+
+
+\moderncvstyle{classic}                     % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                      % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                 % if you are not using xelatex or lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                          % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=2cm,scale=0.71]{geometry}
+%\usepackage[left=.7cm,right=1.5cm,bottom=1.5cm,top=1.5cm,scale=0.71]{geometry}
+\usepackage[left=.5cm,top=1.5cm,bottom=1.5cm,right=2cm]%[left=.5cm,right=1cm,bottom=2cm,top=1.5cm,scale=0.71]
+{geometry}
+
+\recomputelengths
+
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0mm,parsep=0mm,topsep=1mm}
+%\setlength{\hintscolumnwidth}{2.5cm}
+%\setlength{\makecvtitlenamewidth}{10cm}
+% if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+
+\newcommand{\pal}{$\textcolor{color1}{\circ}$}     %
+
+%\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+%\makeatletter
+%\newcommand*{\homepageA}[1]{\def\@homepageA{#1}}
+%\newcommand*{\homepageB}[1]{\def\@homepageB{#1}}
+%\patchcmd{\maketitle}% <cmd>
+%  {\ifthenelse{\isundefined{\@homepage}}{}{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}}% <search>
+%  {\ifthenelse{\isundefined{\@homepageA}}{}{\addtomaketitle{\homepagesymbol\httplink{\@homepageA}}}%
+%   \ifthenelse{\isundefined{\@homepageB}}{}{\addtomaketitle{\homepagesymbol\httplink{\@homepageB}}}}% <replace>
+%  {}{}% <success><failure>
+%\makeatother
+
+\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
+%\definecolor{color1}{rgb}{0,0.5,0}% light blue
+
+\name{Francesco}{\mbox{Della Pietra}}
+\title{Curriculum Vitae}                  % optional, remove / comment the line if not wanted
+\address{University of Naples Federico II}{Department of Mathematics and Applications ``R. Caccioppoli''}{Via Cintia Monte sant'Angelo 80126 -- Naples, Italy}% optional, remove / comment the line if not wanted; the ''postcode city'' and ''country'' arguments can be omitted or provided empty
+\phone[fixed]{+39 081675668}                  % optional, remove / comment the line if not wanted; the optional ''type'' of the phone can be ''mobile'' (default), ''fixed'' or ''fax''
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{f.dellapietra@unina.it}                          % optional, remove / comment the line if not wanted
+%\homepage{sites.google.com/view/fdellapietra}
+%\homepageB{https://sites.google.com/view/fdellapietra/}                       % optional, remove / comment the line if not wanted
+%\social{F-5998-2012}                         % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                       % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                        % optional, remove / comment the line if not wanted
+\extrainfo{\homepagesymbol\httplink{www.docenti.unina.it/f.dellapietra}
+\\
+\httplink[ORCID: 0000-0003-0324-2745]{orcid.org/0000-0003-0324-2745} \\
+\httplink[Scopus ID: 6603501015]{www.scopus.com/authid/detail.uri?authorId=6603501015} \\
+\httplink[ArXiv]{arxiv.org/a/dellapietra_f_1.html}}
+                                           % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{Moreno_ID.pdf}         % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                      % to typeset your resume in Chinese using CJK
+\begin{minipage}{1\textwidth}
+\makecvtitle
+\end{minipage}
+\vspace{-1cm}
+\section{Personal Information}
+\cvline{First Name}{Francesco}
+\cvline{Last Name}{Della Pietra}
+\cvline{Place and Date of Birth}{Naples, April 12, 1981}
+\cvline{Nationality}{Italian}
+
+\section{Current Position}
+\cventry{Since 18.5.2026}{Full Professor}{Academic Recruitment Field 01/A3 -- Mathematical Analysis, Probability and Mathematical Statistics}{GSD 01/MATH-03; SSD MATH-03/A (Italian academic classification codes)}{}{\footnotesize{Employed at the University of Naples Federico II, Department of Mathematics and Applications}}
+
+\section{National Scientific Habilitation (ASN)}
+
+\cventry{7.5.2021}{Habilitation for the position of Full Professor (I fascia)} {} {}{}{\footnotesize{\httplink[Call d.d. 2175/2018 (VI quarter)]{asn18.cineca.it/pubblico/miur/esito-abilitato/01\%252FA3/1/6}, s.c. 01/A3 Mathematical Analysis, Probability and Mathematical Statistics, obtained unanimously. Valid until 7.5.2032 (art. 16, paragraph 1, Law 240/10)}}
+\cventry{28.3.2017}{Habilitation for the position of Associate Professor (II fascia)} {}{}{}{\footnotesize{Call d.d. 1532/2016, s.c. 01/A3 Mathematical Analysis, Probability and Mathematical Statistics, obtained unanimously}}
+
+\section{Previous Positions}
+%\cventry{30.12.2008 -- 31.08.2018}{Ricercatore universitario a tempo indeterminato}{s.c.  01/A3 -- Analisi Matematica, Probabilit\`a e Statistica Matematica}{SSD MAT/05}{}{\footnotesize{Dal 1.11.2013 in servizio presso l'Universit\`a degli studi di Napoli Federico II, Dipartimento di Matematica e applicazioni. Dal 30.12.2008 al 31.10.2013 in servizio presso l'Universit\`a degli studi del Molise, afferente al Dipartimento di Scienze Animali, Vegetali e dell'Ambiente, e alla Facolt\`a di Ingegneria fino al 30 aprile 2012. In seguito alla loro dismissione, dovuta all'applicazione della L.240/2010, dal 1 maggio 2012 al 31 ottobre 2013 afferente al Dipartimento di Bioscienze e Territorio}}
+\cventry{1.9.2018-17.5.2026}{Associate Professor}{Academic Recruitment Field 01/A3 -- Mathematical Analysis, Probability and Mathematical Statistics}{GSD 01/MATH-03; SSD MATH-03/A (Italian academic classification codes)}{}{\footnotesize{Employed at the University of Naples Federico II, Department of Mathematics and Applications}}
+\cventry{30.12.2008 -- 31.08.2018}{University Researcher (permanent position)}{s.c.  01/A3 -- Mathematical Analysis, Probability and Mathematical Statistics}{SSD MAT/05 (Italian academic classification code)}{}{\footnotesize{
+\begin{itemize}
+\item[-] 30.12.08-31.10.13 University of Molise (from 30.12.08 to 30.4.12, Dept. of Animal, Plant and Environmental Sciences, Faculty of Engineering; from 1.5.12 to 31.10.13, Department of Biosciences and Territory)
+\item[-] 1.11.13-31.08.18 University of Naples Federico II, Department of Mathematics and Applications
+\end{itemize}
+%Dal  presso l'Universit\`a degli studi di Napoli Federico II, Dipartimento di Matematica e applicazioni. Dal 30.12.08 al 31.10.13 presso l'Universit\`a degli studi del Molise: dal 1.5.12 al 31.10.13,
+%Dipartimento di Bioscienze e Territorio; dal 30.12.08 al 30.4.12, Dip. di Scienze Animali, Vegetali e dell'Ambiente, Facolt\`a di Ingegneria.  %In seguito alla loro dismissione, dovuta all'applicazione della L.240/2010,
+}}
+
+\cventry{8.2008 -- 12.2008}{Research Grant Holder}{}
+{Department of Mathematics and Applications, University of Naples Federico II}{}{\footnotesize{\emph{Symmetrization methods: inequalities and comparison results for solutions of elliptic and parabolic problems}}}
+
+\section{Education}
+\cventry{11.2003 -- 10.2007}
+{Ph.D. in Mathematical Sciences}
+  {XIX Cycle}
+  {University of Naples Federico II} {obtained on 28.1.2008}
+  {\footnotesize Thesis Title: \href{http://www.fedoa.unina.it/2014/1/Della_Pietra_Scienze_Matematiche.pdf}{Existence results for some classes of nonlinear elliptic problems} Supervisor: Prof. V. Ferone}
+  {}
+\cventry{10.1999 -- 10.2003}{Degree in Mathematics (Laurea)}{}{University of Naples Federico II (110/110 cum laude), 22.10.2003}{}{\footnotesize{Thesis in Mathematical Analysis:
+\emph{Metodi di simmetrizzazione ed equazioni alle derivate parziali} [Symmetrization methods and partial differential equations],
+Supervisor Prof. V. Ferone}}
+
+\section{Awards and Recognitions}
+\cventry{1.2021}{Research Grant Award DAAD}{}{}{}{Fellowship Deutscher Akademischer Austauschdienst -- Research Stays for University Academics and Scientists}
+
+\section{Visiting Professor Periods}
+\cventry{15.7.2025}{Sapienza University of Rome}{}{SBAI Department, at the invitation of Prof. F. Oliva}{}{}
+\cventry{30.5.2024}{Sapienza University of Rome}{}{Dept. of Mathematics G. Castelnuovo, at the invitation of Prof. F. Leoni}{}{\footnotesize Seminar given on this occasion: \textit{Shape optimization problems in models for heat transmission}}
+
+\cventry{24-25.1.2024}{ University of Calabria}{}{Department of Mathematics and Informatics, at the invitation of Prof. G. Riey}{}{\footnotesize Seminar given on this occasion: \textit{Optimal estimates for the first Robin eigenvalue of nonlinear elliptic operators}}
+
+\cventry{15-16.5.2023}{Sapienza University of Rome}{}{SBAI Department, at the invitation of Profs. F. Oliva and F. Petitta}{}{}
+
+\cventry{15-17.2.2023}{Sapienza University of Rome}{}{SBAI Department, at the invitation of Profs. F. Oliva and F. Petitta}{}{\footnotesize Seminar given on this occasion: \textit{Some optimization problems in thermal insulation}}
+%, 16.2.2023}
+\cvitem{1.4.2021 -- 30.6.2021}{\textbf{{Friedrich-Alexander-Universit\"at Erlangen-N\"urnberg}}, \textbf{DAAD} scholarship and research grant (Research Stays for University Academics and Scientists -- granted DAAD Fellowship), scientific responsible Prof. E. Zuazua.}
+\cventry{15.10.2018 -- 20.10.2018}{University of Bristol}{}{School of Mathematics, at the invitation of Prof. M. van den Berg}{}{\footnotesize Seminar given on this occasion: \textit{Optimization of the first eigenvalue of some quasilinear operators with respect to boundary conditions}}%, 16.10.2018}
+\cventry{8.10.2016 -- 23.10.2016}{Fellowship Research, Xiamen University}{}{School of Mathematical Sciences, at the invitation of Prof. C. Xia}{}{\footnotesize Seminar given on this occasion: \textit{Symmetry and symmetry breaking results for nonlinear eigenvalue problems}}
+%, 21.10.2016}
+\cvitem{21-26.2.2016}{\textbf{Aix-Marseille University}, Marseille Institute of Mathematics, at the invitation of Prof. E. Parini}
+\cvitem{29.6-3.7.15} { \textbf{University of Brescia}, DICATAM, at the invitation of Prof. H. Kova\v{r}\'ik}
+\cvitem{8-15.9.2012} {\textbf{Autonomous University of Madrid}, Dept. of Mathematics, at the invitation of Prof. I. Peral}
+\cvitem{29.10-6.11.12} {\textbf{Autonomous University of Madrid}, Dept. of Mathematics, at the invitation of Prof. I. Peral}
+\cvitem{7.2-1.3.09} {\textbf{Autonomous University of Madrid}, Dept. of Mathematics, at the invitation of Prof. I. Peral}
+
+
+\section{Participation as Speaker at International Conferences and Congresses} 
+\cventry{29.9.2026 -- 2.10.2026}{Invited Speaker}{``Dynamics, stability, and qualitative properties in nonlinear PDEs''}{Maratea (PZ), Italy}{}
+{\footnotesize\textit{Maximization of the efficiency of the first Dirichlet eigenfunction and improved eigenvalue inequalities}}
+\cventry{6.7.2026 -- 10.7.2026}{Invited Speaker}{AIMS Conference -- Special Session ``Diffusion problems with non-standard growth conditions''}{Athens, Greece}{}
+{\footnotesize\textit{Nonlinear elliptic problems with quadratic gradient growth and singular Robin eigenvalues}}
+\cventry{25.5.2026 -- 29.5.2026}{Invited Speaker}{``New perspectives in PDEs and related topics'', International Conference on Elliptic and Parabolic Problems}{Gaeta (LT), Italy}{}
+{\footnotesize\textit{Nonlinear elliptic equations with quadratic gradient growth and singular Robin eigenvalue problems}}
+\cventry{2.02.2026 - 4.02.2026}{Invited Speaker}{ICMC Summer Meeting on Differential Equations}{Sao Carlos (Brazil)}{}
+{\footnotesize\textit{Weighted Robin eigenvalue problems and nonlinear
+elliptic equations with quadratic growth in the gradient}}
+\cventry{12.09.2024 - 14.09.2024}{Invited Speaker}{''Recent Advances in Nonlinear PDEs and Applications''}{Paestum (SA), Italy}{}
+{\footnotesize\textit{Upper and lower bounds for the first Robin eigenvalue of nonlinear elliptic operators}}
+
+
+\cventry{2.12.2024 - 3.12.2024}{Invited Speaker}{''Geometric Analysis and PDEs in Sorrento''}{Sorrento (NA), Italy}{}
+{\footnotesize\textit{Optimization problems in models for heat transfer}}
+\cventry{20.5.2024 - 24.5.2024}{Invited Speaker}{Minisymposium ``Singular, degenerate and anisotropic PDEs'', in ``International Conference on Elliptic and Parabolic Problems''}{Gaeta (LT), Italy}{}{\footnotesize\textit{On a nonlinear Robin problem with an absorption term on the boundary}}
+\cventry{29.4.2024-30.4.2024}{Invited Speaker}{Nonlinear Analysis Days}{Turin, Italy}{}{\footnotesize\textit{On the first Robin eigenvalue of nonlinear elliptic operators}}
+\cventry{22.2.2024 - 24.2.2024}{Invited Speaker}{``Three days on Regularity Results for Variational Problems and PDEs''}{Modena, Italy}{}{\footnotesize\textit{Optimal estimates for the first Robin eigenvalue of the p-Laplacian
+}}
+\cventry{17.9.2023 - 22.9.2023}{Invited Speaker}{``Shape optimization, Isoperimetric and Functional Inequalities''}{Levico, Italy}{}{\footnotesize \textit{Sharp estimates for the first Robin eigenvalue of nonlinear elliptic operators}}
+\cventry{1.2.2023 -- 2.2.2023}{Invited Speaker}{``Lecce-Napoli-Salerno Meeting: PDEs and their applications''}{Montoro (AV), Italy}{}{\footnotesize\textit{Sharp estimates for the first Robin eigenvalue of nonlinear elliptic operators}}
+\cventry{19.9.2022 -- 23.9.2022}{Invited Speaker}{``Shape Optimisation and Geometric Spectral Theory''}{ICMS, Edinburgh, UK}{}{\footnotesize
+\textit{On the behaviour of the first eigenvalue of the $p$-Laplacian with Robin boundary conditions as $p$ goes to $1$}}
+\cventry{7.9.2022 -- 11.9.2022}{Invited Speaker}{Meeting ``Analysis in Tatra''}{Male Ciche, Poland}{}{\footnotesize \textit{Sharp estimates for the first eigenvalue of the Robin $p$-Laplacian as $p$ goes to $1$}}
+\cventry{18.7.2022 -- 22.7.2022}{Invited Speaker}{Minisymposium ``New trends on the $1$-Laplacian''}{CEDyA 2022 (XXVII congress of differential equations and applications)}{Zaragoza, Spain}
+{\footnotesize\textit{On the first Robin eigenvalue of the $p$-Laplacian as $p$ goes to $1$}}
+\cventry{21.6.2022 -- 22.6.2022}{Invited Speaker}{``Nonlinear PDEs 2022''}{Valencia, Spain}{}{
+\footnotesize\textit{Sharp estimates for the first Robin eigenvalue of nonlinear elliptic operators}}
+\cventry{17.6.2022 -- 17.6.2022}{Speaker}{``Geometric properties of PDEs''}{45eme Congr\`es National d'Analyse Num\'erique (SMAI)}{
+Evian-les-Bains, France}{\footnotesize\textit{On some Robin problems driven by $p$-Laplacian as $p$ tends to $1$}}
+\cventry{16.2.2022 -- 18.2.2022}{Invited Speaker}{``PDE's in presence in Rome''}{Rome, Italy}{}{\footnotesize\textit{On the behaviour of the first eigenvalue of the $p$-Laplacian with Robin boundary conditions as $p$ goes to $1$}}
+\cventry{3-4.11.2021 -- 4.11.2021}{Invited Speaker}{``Nonlinear PDEs in Salerno''}{Fisciano (Sa), Italy}{}
+{\footnotesize\textit{Some optimization problems in thermal insulation}}
+\cventry{30.8.2021 -- 1.9.2021}{Invited Speaker}{SIMAI National Congress} %(Societ\`a italiana di Matematica Applicata e Industriale)
+{Parma, Italy}{}{\footnotesize\textit{An optimization problem in thermal insulation with Robin boundary conditions}}
+\cventry{30.4.2021}{Invited Speaker}{``Recent Advances in Analysis and Control''}{FAU Erlangen-N\"urnberg, Germany}{}
+{\footnotesize\textit{Shape optimization and isoperimetric inequalities}}
+\cventry{23.9.2019 -- 27.9.2019}{Speaker}{``Shape Optimization and Isoperimetric and Functional Inequalities''}{Levico (Tn), Italy}{}{
+\textit{An optimization problem in thermal insulation}}
+\cventry{2.9.2019 -- 7.9.2019}{Speaker}{XXI UMI Congress}{Pavia, Italy}{}
+{\footnotesize\textit{Shape optimization for a thermal insulation problem}}
+\cventry{29.7.2019 -- 2.8.2019}{Invited Speaker}{12th International ISAAC Congress}{Aveiro, Portugal}{}{\footnotesize\textit{An optimization problem in thermal insulation}}
+\cventry{20.4.2019 -- 24.5.2019}{Invited Speaker}{Minisymposium ``Elliptic PDEs with nonstandard growth and related topics'', ``International Conference on Elliptic and Parabolic Problems''}{Gaeta (LT), Italy}{}{\footnotesize\textit{Symmetrization with respect to mixed volumes}}
+\cventry{20.12.2018}{Invited Speaker}{``Research Day''}{Naples, Italy}{}{\footnotesize\textit{Shape optimization for a thermal insulation problem}}
+\cventry{10.10.2018 -- 12.10.2018} {Speaker}{``Topics in Nonlinear Analysis: Calculus of Variations and PDEs''}{Lisbon, Portugal}{}{\footnotesize\textit{Optimization problems related to some anisotropic operators}}
+\cventry{14.5.2018 -- 18.5.2018}{Invited Speaker}{``Eigenvalues and Inequalities'', Institut Mittag-Leffler}{Stockholm, Sweden}{}{\footnotesize\textit{Optimization problems related to some anisotropic operators}}
+\cventry{12.7.2017 -- 14.7.2017}{Invited Speaker}{``Recent advances in PDEs''}{Naples, Italy}{} {\footnotesize\textit{On functionals involving the torsional rigidity related to some classes of nonlinear operators}}
+\cventry{22.5.2017 -- 26.5.2017}{Invited Speaker} {``International Conference on Elliptic and Parabolic Problems''}{Gaeta (LT), Italy}{}{\footnotesize Title:
+\textit{Optimization problems related to some anisotropic operators}}
+\cventry{17.2.2017 -- 18.2.2017}{Invited Speaker}{``PDEs and Related Analytic-Geometric Inequalities''}{Milan, Italy}{}{\footnotesize\textit{Anisotropic Hardy inequalities}}
+\cventry{12.9.2016 -- 16.9.2016} {Invited Speaker} {``PDEs and Related Topics''}{Alghero, Italy}{}{\footnotesize\textit{Symmetry and asymmetry results for some classes of nonlinear eigenvalue problems}}
+\cventry{20.6.2016 -- 23.6.2016} {Invited Speaker} {``GNAMPA Scientific Conference''} {Montecatini T. (PT), Italy}{}{\footnotesize\textit{Optimization of the first eigenvalue of the $p$-Laplacian with respect to boundary conditions}}
+\cventry{25.1.2016 -- 27.1.2016} {Invited Speaker} {``Analytic-Geometric Properties of PDE Solutions''}{Naples, Italy} {}{\footnotesize\textit{Optimization of the first eigenvalue of some quasilinear operators with respect to boundary conditions}}
+\cventry{7.9.2015 -- 12.9.2015}{Speaker}{``XX Congress of the Italian Mathematical Union''} {Siena, Italy} {} {\footnotesize\textit{Faber-Krahn inequality for eigenvalues of anisotropic operators with Robin conditions}}
+\cventry{14.6.2015 -- 17.6.2015}{Invited Speaker}{``International Conference on Nonlinear Operators, Differential Equations and Applications''} {Cluj-Napoca, Romania}{} {\footnotesize\textit{Boundary blow up for nonlinear elliptic equations involving a Finsler Laplacian}}
+\cventry{2.9.2013 -- 6.9.2013}{Invited Speaker} {``$3^{\textrm{rd}}$ Italian-Japanese Workshop on Geometric Properties for Parabolic and Elliptic PDE's''} {Tokyo, Japan}{}{\footnotesize\textit{Symmetry breaking in constrained Cheeger type isoperimetric inequalities}}
+\cventry{10.6.2013 -- 14.6.2013} {Speaker} {``Minicourses in Mathematical Analysis''} {Padua, Italy}{}{\footnotesize\textit{Symmetry breaking in constrained Cheeger type isoperimetric    inequality}}
+\cventry{5.10.2012 -- 6.10.2012} {Invited Speaker} {``$1^{st}$ Weekend on Variational Methods and Differential Equations''}{Catania, Italy}{}  {\footnotesize\textit{Upper estimates for eigenvalues of some nonlinear operators}}
+\cventry{12.9.2011 -- 17.9.2011}{Speaker}{``XIX Congress of the Italian Mathematical Union''}{Bologna, Italy}{}{\footnotesize Title:
+ \textit{Strongly degenerate elliptic problems at infinity}}
+\cventry{26.1.2007 -- 27.1.2007}{Invited Speaker}{``Convexity and Geometric Inequalities''}{Florence, Italy}{} {\footnotesize\textit{Non-uniformly elliptic equations with general growth in the gradient}}
+
+\subsection{Posters}
+\cventry{27.5.2016}{{\normalfont "New Trends in Calculus of Variations"}}{Accademia Nazionale dei Lincei, Rome, Italy}{}{}{
+\footnotesize\textit{Optimizing the first eigenvalue of some quasilinear operators with respect to boundary conditions}
+}
+\cventry{25.5.2015 -- 29.5.2015}{\normalfont $4^{\text{th}}$ Italian-Japanese Workshop on Geometric Properties for Parabolic and Elliptic PDEs}{Palinuro (SA), Italy}{}{}{\footnotesize\textit{Blow-up solutions for  nonlinear elliptic equations involving a Finsler-Laplacian}}
+
+\section{\textbf{Teaching Activity}}
+
+\section{Courses and Seminars for Ph.D. Programs}
+%\cvitem{A.A. 2023/24}{
+%\textbf{Titolarit\`a} del corso di dottorato su \textbf{Spazi di Sobolev e applicazioni alle PDE}, Universit\`a degli Studi di Napoli Federico II, dottorato in Matematica e Applicazioni (20 ore)}
+  \cventry{A.Y. 2023/24}{Seminar}{Shape optimization in geometric and functional inequalities}{presentation for the Ph.D. program in Mathematics and Applications}{Dept. of Mathematics and Applications, Naples Federico II, 28.05.2024}{}
+\cvitem{A.Y. 2022/23}{
+Responsible for the \textbf{Ph.D. course} on \textit{Geometric properties of solutions to elliptic partial differential equations}, Naples Federico II, Ph.D. in Mathematics and Applications (20 hours, in collaboration with F. Chiacchio)}
+ \cvitem{A.Y. 2020/21}{Responsible for the \textbf{Ph.D. course} on \textit{Some aspects of elliptic partial differential equations}, Naples Federico II, Ph.D. in Mathematics and Applications (20 hours, in collaboration with G. Zecca)}
+  \cventry{A.Y. 2014/15}{Seminar}{Symmetrization methods and applications}{presentation of the Ph.D. in Mathematical and Computer Sciences}{Dept. of Mathematics and Applications, Naples Federico II, 19.05.2015}{}
+
+  \cventry{A.Y. 2014/15}{Poster}{Symmetrization methods and applications}{presentation of the Ph.D. in Mathematical and Computer Sciences}{Dept. of Mathematics and Applications, Naples Federico II, 19.05.2015}{}
+
+\section{Ph.D. Thesis Supervision}
+\cventry{8.2026 -- 7.2027}{Liu Xie}{Ph.D. student, Beijing Normal University -- visiting at University of Naples Federico II}{}{}{Hosting Supervisor}
+\cventry{2021 -- 2024}{Rosa Barbato} {XXXVII cycle}{}{}{Ph.D. in Mathematics and Applications (Naples Federico II)}
+\cventry{2014 -- 2017}{Gianpaolo Piscitelli}{(XXIX cycle, co-supervised with Prof. V. Ferone)}{}{}{Ph.D. in Mathematical and Computer Sciences (Naples Federico II)}
+%\section{Commissione esami finali dottorato di ricerca}
+
+\section{Teaching Activity for Bachelor's and Master's Degree Courses}
+\cvitem{A.Y. 2026/27}
+{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$] \textbf{Foundations of Mathematics} (9 cfu), Natural and Environmental Sciences
+  \item[$\textcolor{color1}{\circ}$] \textbf{Real Analysis} (6 cfu), Master's in Mathematics
+  \end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2025/26}
+{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics} (12 cfu),
+     Geological Sciences
+\item[$\textcolor{color1}{\circ}$] \textbf{Real Analysis} (6 cfu), Master's in Mathematics
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{}
+{\textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematical methods for engineering I} (8 cfu),
+     Electronics engineering.
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2024/25}
+{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics} (12 cfu),
+     Geological Sciences
+\item[$\textcolor{color1}{\circ}$] \textbf{Real Analysis} (6 cfu, co-responsibility for 3 cfu), Master's in Mathematics
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{}
+{\textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics I} (9 cfu),
+     Management of Aerospace Systems for Defense.
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2023/24}
+{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics} (12 cfu),
+     Geological Sciences
+\item[$\textcolor{color1}{\circ}$] \textbf{Real Analysis} (6 cfu, co-responsibility for 3 cfu), Master's in Mathematics
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{}
+{\textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics II} (6 cfu),
+     Management of Aerospace Systems for Defense.
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2022/23}
+{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematical Analysis I} (9 cfu),
+     Aerospace Eng., Mechanical Eng.
+    \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematical Methods for Engineering} (8 cfu), Automation Eng., Computer Eng., Biomedical Eng.
+        \item[$\textcolor{color1}{\circ}$] \textbf{Real Analysis} (6 cfu, co-responsibility for 3 cfu), Master's in Mathematics
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+\cvitem{}
+{\textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+  \begin{itemize}
+  \item[$\textcolor{color1}{\circ}$]  \textbf{Mathematics II} (6 cfu),
+     Management of Aerospace Systems for Defense.
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+
+\cvitem{A.Y. 2021/22}
+{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize} \item \textbf{Mathematical Analysis I} (9 cfu),
+     Mechanical Eng. and Aerospace Eng.
+    \item  \textbf{Mathematical Methods for Engineering} (8 cfu),  Automation Eng., Computer Eng., Biomedical Eng.
+\end{itemize}
+      \vspace{-.05cm}
+\textbf{\underline{Lecture Series}} (Naples Federico II):
+\begin{itemize}
+        \item \textbf{Real Analysis} (3 out of 6 cfu), Master's in Mathematics %titolare prof. C. Trombetti.
+\end{itemize}
+   \vspace{-.6cm}\phantom{x}
+}
+
+\cvitem{A.Y. 2020/21}
+{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize} \item \textbf{Mathematical Analysis I} (9 cfu),
+   Mechanical Eng. and Aerospace Eng.
+  \item \textbf{Mathematical Methods for Engineering} (8 cfu), Automation Eng., Computer Eng., Biomedical Eng.
+ \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+  }
+
+\cvitem{A.Y. 2019/20}
+{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize} \item \textbf{Mathematical Analysis I} (9 cfu),
+   Mechanical Eng. and Aerospace Eng.
+  \item \textbf{Mathematical Analysis II} (9 cfu),  Aerospace Eng., Mechanical Eng.
+ \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+  }
+\cvitem {A.Y. 2018/19}
+{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}\item \textbf{Mathematical Analysis I} (9 cfu),
+   Mechanical Eng. and Aerospace Eng.
+  \item  \textbf{Mathematical Analysis II} (9 cfu),  Aerospace Eng., Mechanical Eng.
+ \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+  }
+
+\cvitem{A.Y. 2017/18}
+{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}
+  \item \textbf{Mathematical Analysis I} (9 cfu),
+   Aerospace Eng., Mechanical Eng.
+  \item \textbf{Mathematical Analysis II} (9 cfu),  Aerospace Eng., Mechanical Eng.
+  \end{itemize}       \vspace{-.05cm}
+\textbf{\underline{Supplementary Teaching and Student Support}} (Naples Federico II):
+\begin{itemize}  \item \textbf{Mathematical Analysis 2},
+  Physics. %, docenti titolari prof.ssa B. Brandolini, prof. V. Ferone.
+  %Partecipazione alle relative com\-mis\-sio\-ni di esame
+\item \textbf{Mathematical Analysis 2},
+  Mathematics. %Partecipazione alle relative com\-mis\-sio\-ni di esame %, docenti titolari prof. A. Alvino, prof.ssa C. Trombetti;
+  \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2016/17}{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+\begin{itemize} \item \textbf{Mathematical Analysis I} (9 cfu),
+    Aerospace Eng., Mechanical Eng.
+\item \textbf{Mathematical Analysis II} (9 cfu),  Aerospace Eng., Mechanical Eng.
+     \end{itemize}
+          \vspace{-.05cm}
+\textbf{\underline{Supplementary Teaching and Student Support}} (Naples Federico II):
+\begin{itemize}
+\item \textbf{Mathematical Analysis 1},
+  Physics %, docenti titolari prof.ssa B. Brandolini, prof. V. Ferone.
+%Partecipazione alle relative com\-mis\-sio\-ni di esame.
+\item \textbf{Mathematical Analysis 2},
+  Physics. %, docenti titolari proff. C. Nitsch, G. Trombetti.
+%Partecipazione alle relative com\-mis\-sio\-ni di esame
+  \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+}
+\cvitem{A.Y. 2015/16}{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+  \begin{itemize}\item \textbf{Mathematical Analysis I} (9 cfu), Environmental and Territorial Eng., Infrastructure Project Management Eng.
+  \item \textbf{Mathematical Analysis II} (9 cfu), Environmental and Territorial Eng., Infrastructure Project Management Eng.
+       \end{itemize}
+       \textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+  \begin{itemize}
+\item \textbf{Mathematical Methods for Engineering} (tutoring course, 20 hours)
+\end{itemize}
+      \vspace{-.05cm}
+\textbf{\underline{Supplementary Teaching and Student Support}} (Naples Federico II):
+\begin{itemize} \item  \textbf{Mathematical Analysis I},  Physics. %, docenti titolari prof. G. Trombetti e prof.ssa M.R. Tricarico.
+%  %artecipazione alle relative commissioni di esame
+\item[$\textcolor{color1}{\circ}$] %\textbf{\underline{Didattica integrativa e di servizio agli studenti}} del corso di
+\textbf{Mathematical Analysis 2},  Physics. %, docente titolare prof. Vincenzo Ferone.
+%%artecipazione alle relative commissioni di esame
+  \end{itemize}
+    \vspace{-.6cm}\phantom{x}
+}
+ \cvitem{A.Y. 2014/15}{
+\textbf{\underline{Course Responsibility}} (Naples Federico II):
+\begin{itemize}
+\item\textbf{Mathematical Analysis I} (9 cfu), Environmental and Territorial Eng.
+  \item \textbf{Mathematical Analysis II} (9 cfu), Environmental and Territorial Eng.
+    \end{itemize}
+          \vspace{-.1cm}
+\noindent\textbf{\underline{Course Responsibility}} (Pozzuoli Air Force Academy):
+\begin{itemize}
+\item \textbf{Mathematical Methods for Engineering} (tutoring course, 20 hours)
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+\cvitem
+   {A.Y. 2013/14}{\textbf{\underline{Course Responsibility}} (Naples Federico II):
+\begin{itemize}    \item \textbf{Mathematical Analysis II} (9 cfu), Environmental and Territorial Eng.
+  \end{itemize}
+       \vspace{-.05cm}
+\textbf{\underline{Course Responsibility}} (University of Molise):
+\begin{itemize}    \item \textbf{Mathematical Analysis} (12 cfu),  Building Eng., until 31.10.2013
+  \item Preparatory course in \textbf{Mathematical Analysis} (2 cfu) Building Eng.
+  \end{itemize}
+        \vspace{-.05cm}
+\textbf{\underline{Supplementary Teaching and Student Support}} (Naples Federico II):
+\begin{itemize}    \item \textbf{Mathematical Analysis
+    I}, \textbf{Mathematical Methods for Engineering}, various Engineering degree courses
+    %\! Ing. Meccanica,\! Chimica,\! Navale,\! Informatica. %artecipazione alle relative commissioni di esame
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+    \cvitem{A.Y. 2012/13}
+  {
+\textbf{\underline{Course Responsibility}} (University of Molise):
+\begin{itemize}    \item \textbf{Mathematical Analysis} (12 cfu),  Building Eng.
+  \item Preparatory course in \textbf{Mathematical Analysis} (2 cfu),  Building Eng.
+  \item Preparation for the entrance test to the Master's degree program in Medicine and Surgery (2 cfu)
+  \end{itemize}
+     \vspace{-.6cm}\phantom{x}
+   }
+       \cvitem{A.Y. 2011/12}{\textbf{\underline{Course Responsibility}} (University of Molise):
+\begin{itemize}    \item[$\textcolor{color1}{\circ}$] \textbf{Mathematical Analysis} (12 cfu),  Building Eng.
+  \item[$\textcolor{color1}{\circ}$] Preparatory course in \textbf{Mathematical Analysis} (2 cfu), Building Eng.
+  \end{itemize}
+     \vspace{-.6cm}\phantom{x}
+}
+
+  \cvitem{A.Y. 2010/11}{
+  \textbf{\underline{Course Responsibility}} (University of Molise):
+  \begin{itemize}
+   \item[$\textcolor{color1}{\circ}$] \textbf{Mathematical Analysis} (12 cfu),  Building Eng.
+   \item[$\textcolor{color1}{\circ}$] Preparatory course in \textbf{Mathematical Analysis} (3 cfu), Building Eng.
+  \end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+  \cvitem{A.Y. 2009/10}{
+  \textbf{\underline{Course Responsibility}} (University of Molise):
+\begin{itemize}
+   \item[$\textcolor{color1}{\circ}$] \textbf{Mathematical Analysis} (12 cfu),  Building Eng.
+   \item[$\textcolor{color1}{\circ}$] Preparatory course in \textbf{Mathematical Analysis} (3 cfu), Building Eng.
+  \end{itemize}
+     \vspace{-.6cm}\phantom{x}
+   }
+
+  \cvitem
+     {A.Y. 2008/09}{\textbf{\underline{Course Responsibility}} (University of Molise):
+\begin{itemize} \item \textbf{Mathematical Analysis} (12 cfu),  Building Eng.
+  \end{itemize}
+     \vspace{-.6cm}\phantom{x}
+   }
+  \cvitem
+     {A.Y. 2008/09}{
+     \textbf{\underline{Exercise Sessions}} (Naples Federico II):
+\begin{itemize}
+   \item \textbf{Mathematical Methods for Engineering},  Computer Eng., Automation Eng.
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+ \cvitem{A.Y. 2007/08}
+{
+\textbf{\underline{Course Responsibility}} (Naples "Parthenope" University):
+  \begin{itemize}  \item \textbf{Mathematical Analysis II} (9 cfu, teaching contract),  Management Eng. for Service Networks
+ \item Preparatory course in \textbf{Mathematics} (teaching contract),  Management Eng. for Service Networks
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+ \cvitem{A.Y. 2006/07}
+  {   \textbf{\underline{Exercise Sessions}} (Naples Federico II):
+\begin{itemize}    \item \textbf{Mathematical Methods for Engineering},  Computer Eng., Automation Eng.%, docente titolare prof. V. Ferone.
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+ \cvitem{A.Y. 2005/06}{ \textbf{\underline{Exercise Sessions}} (Naples Federico II):
+\begin{itemize}  \item
+  \textbf{Mathematical Analysis II},  Computer Eng. and Automation Eng.%, docente titolare prof. V. Ferone.
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+ \cvitem{A.Y. 2004/05}{
+  \textbf{\underline{Exercise Sessions}} (Naples Federico II):
+\begin{itemize}    \item[$\textcolor{color1}{\circ}$] \textbf{Mathematical Analysis I},  Computer Eng. and Automation Eng.%, docente titolare prof. V. Ferone;
+   \item[$\textcolor{color1}{\circ}$] \textbf{Mathematical Methods for Engineering},  Computer Eng. and Automation Eng.%, docente titolare prof. V. Ferone.
+\end{itemize}
+  \vspace{-.6cm}\phantom{x}
+}
+
+%\needspace{4\baselineskip}
+\section{Supervisor of Bachelor's and Master's Theses}
+\subsection{Master's Theses, University of Naples Federico II}
+\cventry{}{\textbf{Master's} Degree in Mathematics}{}{Denise Franzoni}{\textit{In preparation}}{}
+\cventry{}{\textbf{Master's} Degree in Mathematics}{}{Stefania Bocciardi}{\textit{Sobolev Spaces (in preparation)}}{}
+\cventry {A.Y. 2024/25} {\textbf{Master's} Degree in Mathematics}{}{Simona Sansone}{\textit{Some isoperimetric inequalities of the eigenvalues of the Laplacian}}{}
+\cventry{A.Y. 2021/22}{\textbf{Master's} Degree in Mathematics}{}{Angelica Di Girolamo}{\textit{The Heat Equation}}{}
+\cventry{A.Y. 2021/22}{\textbf{Master's} Degree in Mathematics}{}{Martina Verolla}{\textit{The Isoperimetric Inequality}}{}
+\cventry{A.Y. 2021/22}{\textbf{Master's} Degree in Mathematics}{}{Michela Criscuolo}{\textit{The Best Constant in the Sobolev Inequality}}{}
+\cventry {A.Y. 2020/21}{\textbf{Master's} Degree in Mathematics}{}{Noemi d'Aprano}{\textit{On Some Applications of the Maximum Principle}}{}
+\cventry {A.Y. 2020/21} {\textbf{Master's} Degree in Mathematics}{}{Rosa Barbato}{\textit{Serrin's Overdetermined Problem}}{}
+\subsection{Bachelor's Theses, University of Naples Federico II}
+\cventry {A.Y. 2022/23} {\textbf{Bachelor's} Degree in Mathematics}{}{Simona Sansone}{\textit{Harmonic Functions and Mean Value Formulas}}{}
+\cventry {A.Y. 2019/20} {\textbf{Bachelor's} Degree in Mathematics}{}{Paolino Ceparano}{\textit{Fourier Series and Transform}}{}
+\cventry {A.Y. 2019/20} {\textbf{Bachelor's} Degree in Mathematics}{}{ Serena Andreozzi}{\textit{The Riemann Mapping Theorem and Applications}}
+{}
+\cventry {A.Y. 2018/19} {\textbf{Bachelor's} Degree in Mathematics}{}{Marcella Di Marino}{\textit{The Maximum Principle for Differential Equations and Some Applications}}{}
+\cventry {A.Y. 2018/19} {\textbf{Bachelor's} Degree in Mathematics}{}{Ilenia Di Giorgio}{\textit{An Introduction to the Calculus of Variations and Applications to the Theory of Minimal Surfaces}}{}
+
+%\needspace{4\baselineskip}
+\section{Other Teaching Activities}
+ \cvitem{A.Y. 2025/26}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 9 hours), aimed at high school students, Naples Federico II}
+ \cvitem{A.Y. 2025/26}
+{Within \textit{Fibonacci Day} (January 14, 2026), seminar and teaching activities on \textbf{Mathematics and Music}, Naples Federico II}
+ \cvitem{A.Y. 2024/25}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+ \cvitem{{A.Y. 2023/24}}
+{Within the \textit{National University Day - "Universities Unveiled" (March 20, 2024)}, seminars and teaching experiences on \textbf{Mathematics and Music}, Naples Federico II}
+  \cvitem{A.Y. 2023/24}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+  \cvitem{A.Y. 2022/23}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+  \cvitem{A.Y. 2021/22}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+     \cvitem{A.Y. 2020/21}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+  \cvitem{A.Y. 2019/20}
+{ \textit{Scientific Degree Project (PLS)}: course on \textbf{Mathematics and Music} (\textbf{responsible}, 12 hours), in collaboration with Prof. C. Nitsch, aimed at high school students, Naples Federico II}
+  \cvitem{A.Y. 2012/13}
+{    \textbf{{Responsible}} for the preparation course for the entrance test to the Master's degree program in Medicine and Surgery (2 cfu), University of Molise}
+  \cvitem
+    {A.Y. 2010/11}
+{\textbf{{Responsible}} for the university preparatory course aimed at high school students: \textbf{Mathematics between reminders and curiosities} (two courses of 3 cfu each), University of Molise}
+  \cvitem{A.Y. 2009/10}
+{\textbf{{Responsible}} for the university preparatory course aimed at high school students: \textbf{Mathematics between reminders and curiosities} (two courses of 3 cfu each). University of Molise}
+
+    \cvitem
+    {A.Y. 2008/09}
+{\textbf{{Responsible}} for the university preparatory course aimed at high school students: \textbf{Mathematics between reminders and curiosities} (two courses of 3 cfu each), University of Molise}
+
+\section*{Organization of Orientation Seminars and Workshops}
+\cvitem{2026}{\textit{Mathematics: what's next? Will mathematics be my profession? Scenarios, careers and new challenges}, Monte Sant'Angelo, University of Naples Federico II, June 3, 2026}
+\cvitem{2024}{\textit{PhD, why not?} Presentation of the Ph.D. Program in Mathematics and Applications, Department of Mathematics and Applications, University of Naples Federico II, May 28, 2024}
+
+\section{Scientific Research Activity}\closesection
+Research interests focus on the development of analytical and geometric methods in problems of Calculus of Variations and Differential Equations. Particular attention is paid to issues related to:
+\begin{itemize}
+\item[\pal] optimization problems related to geometric-functional inequalities;
+\item[\pal] existence, regularity, qualitative properties of solutions to boundary value problems for partial differential equations
+\end{itemize}
+\emptysection{}
+
+\thispagestyle{empty}
+\section{Publications}
+\subsection{Preprints}
+\cvitem{49.}{Della Pietra F., \textit{An optimal inequality between nonlinear eigenvalues in convex sets}, \textbf{ArXiv} (2026)}
+\cvitem{48.}{Barbato R., Della Pietra F., Masiello A.L., \textit{Asymptotic behavior of the first Robin eigenvalue of nonlinear operators}, \textbf{ArXiv} (2026)}
+\cvitem{47.}{Della Pietra F., \textit{Maximization of the efficiency of the first Dirichlet eigenfunction and improved eigenvalue inequalities}, \textbf{ArXiv} (2026)}
+\cvitem{46.}{Della Pietra F., di Blasio G., Riey G., \textit{A weighted Robin eigenvalue problem and applications to nonlinear elliptic equations with general growth in the gradient}, \textbf{ArXiv} (2025)}
+\cvitem{}{Preprints are available on \href{https://arxiv.org/a/dellapietra_f_1.html}{ArXiv}.}
+
+\subsection{Journal Publications}
+\cvitem{45.}{Della Pietra F., Oliva F., \textit{Optimal insulation and concentration breaking for nonlinear Robin boundary value problems}, \textbf{Indiana University Mathematics Journal}, in press}
+\cvitem{44.}{Barbato R., Della Pietra F., \textit{Upper and lower bounds for the first Robin eigenvalue of nonlinear elliptic operators}, \textbf{Potential Analysis} 64 (2026)}
+\cvitem{43.} {Della Pietra F., Di Blasio G., Radice T., \textit{Existence and regularity results for a class of non-uniformly elliptic Robin problems}, Analysis and Applications (in press)}
+\cvitem{42.} {Della Pietra F., Oliva F., \textit{Some remarks on optimal insulation with Robin boundary conditions}, \textbf{Calculus of Variations and Partial Differential Equations} 64 (2025)}
+\cvitem{41.}{Barbato R., Della Pietra F., Piscitelli G., \textit{On the first Robin eigenvalue of the Finsler $p$-Laplace operator as $p\to 1$}, \textbf{Journal of Mathematical Analysis and Applications}  540 (2024), 128660 1-25.}
+\cvitem{40.}{{Della Pietra F., \textit{P\'olya-type estimates for the first Robin eigenvalue of elliptic operators}, \textbf{Archiv der Mathematik} 123 (2024), 185–197.}}
+\cvitem{39.}{{Della Pietra F., Fantuzzi G., Ignat L., Masiello A.L., Paoli G., Zuazua E., \textit{Finite Element Approximation of the Hardy constant}, \textbf{Journal of Convex Analysis}} 31 (4) (2024), 497-523.}
+\cvitem{38.}{Della Pietra F., Piscitelli G., \textit{Sharp estimates for the first Robin eigenvalue of nonlinear elliptic operators}, \textbf{Journal of Differential Equations}, 386, 269-293 (2024).}
+\cvitem{37.}{Della Pietra F., Oliva F., Segura de Le\'on S., \textit{On a nonlinear Robin problem with an absorption term on the boundary and $L^1$ data}, \textbf{Advances in Nonlinear Analysis},  13: 1-16 (2024).}
+\cvitem{36.}{Della Pietra F., Oliva F., Segura de Le\'on S., \textit{Behavior of solutions to $p$-Laplacian with Robin boundary conditions as $p$ goes to $1$}, \textbf{Proceedings of the Royal Society of Edinburgh - Section A: Mathematics}, 154(1), 105-130 (2024).
+}
+\cvitem{35.} {Della Pietra F., Gavitone N., Xia C., \textit{Motion of level sets by inverse anisotropic mean curvature}, \textbf{Communications in Analysis and Geometry}, 31 (1) 97-118 (2023)}
+\cvitem{34.}{Della Pietra F., Nitsch C., Oliva F., Trombetti C., \textit{On the behaviour of the first eigenvalue of the $p$-Laplacian with Robin boundary conditions as $p$ goes to $1$}, \textbf{Advances in Calculus of Variations}, 16: 1123–1135 (2023)}
+\cvitem{33.}{Della Pietra F., Nitsch C., Trombetti C., \textit{An optimal insulation problem},  \textbf{Mathematische Annalen} 382 (2022) 745–759}
+\cvitem{32.}{Della Pietra F., Gavitone N., Xia C., \textit{Symmetrization with respect to mixed volumes}, \textbf{Advances in Mathematics} 388 (2021) 107887}
+\cvitem{31.} {Della Pietra F., Nitsch C., Scala R., Trombetti C., \textit{An optimization problem in thermal insulation with Robin boundary conditions}, \textbf{Communications in PDEs} 46, n. 12 (2021), 2288-2304}
+\cvitem{30.}{van den Berg M., Della Pietra F., di Blasio G., Gavitone N., \textit{Efficiency and localisation for the first Dirichlet eigenfunction}, \textbf{Journal of Spectral Theory} 11 (2021), 981–1003}
+\cvitem{29.} {Della Pietra F., Piscitelli G., \textit{An optimal bound for nonlinear eigenvalues and torsional rigidity on domains with holes}, \textbf{Milan Journal of Mathematics} 88 (2020), 373–384}
+\cvitem{28.} {Della Pietra F., Piscitelli G., \textit{Saturation phenomena for some classes of nonlinear nonlocal eigenvalue problems}, \textbf{Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur.} 31(1) (2020), 131-150}
+\cvitem{27.}{Della Pietra F., di Blasio G., Gavitone N., \textit{Sharp estimates on the first Dirichlet eigenvalue of non\-linear elliptic operators via maximum principle}, \textbf{Advances in Nonlinear Analysis} 9 (2020), 278-291}
+\cvitem {26.} {Della Pietra F., Gavitone N., Piscitelli G.,
+\textit{On the second Dirichlet eigenvalue of some nonlinear anisotropic elliptic operators},  \textbf{Bulletin des Sciences Math\'ematiques} 155 (2019), 10-32}
+\cvitem{25.} {Della Pietra F., Gavitone N., Guarino Lo Bianco S., \textit{On functionals involving the torsional rigidity related to some classes of nonlinear operators},
+\textbf{Journal of Differential Equations} 265 (2018), 6424-6442}
+\cvitem{24.} {Della Pietra F., di Blasio G., Gavitone N., \textit{Anisotropic Hardy inequalities}, \textbf{Proceedings of the Royal Society of Edinburgh - Section A: Mathematics}, 148A (2018), 1-16}
+\cvitem{23.} {Della Pietra F., Gavitone N., Piscitelli G., \textit{A sharp weighted anisotropic Poincar\'e inequality for convex domains}, \textbf{Compte Rendus Mathematique} 355 (2017), 748-752}
+\cvitem {22.}
+{Della Pietra F., Gavitone N., Kova\v{r}\'ik H.,
+\textit{Optimizing the first eigenvalue of some quasilinear operators with respect to the boundary conditions}, \textbf{ESAIM-COCV}, 23 (2017) 1381-1395}
+\cvitem {21.} {Della Pietra F., di Blasio G., \textit{Blow-up solutions for some nonlinear elliptic equations involving a Finsler-Laplacian}, \textbf{Publicacions Matem\`atiques} 61 (2017),  213-238}
+\cvitem {20.} {Della Pietra F., Piscitelli G., \textit{A saturation phenomenon
+for a nonlinear nonlocal eigenvalue problem}, \textbf{Nonlinear Differential Equations and Applications} 23:62 (2016), 1-18}
+\cvitem {19.} {Della Pietra F., Gavitone N., \textit{Sharp estimates and
+    existence for anisotropic elliptic problems with general growth in the gradient}, \textbf{Journal of Analysis and its Applications (ZAA)} 35 (2016), 61-80}
+ \cvitem{18.} {Della Pietra F., Gavitone N., \textit{Symmetrization with respect to the anisotropic perimeter and applications}, \textbf{Mathematische Annalen} 363 (2015), 953-971}
+  \cvitem{17.} {Brandolini B., Della Pietra F., Nitsch C., Trombetti C., \textit{Symmetry breaking in constrained Cheeger type isoperimetric
+    inequality}, \textbf{ESAIM-COCV} 21 n.2 (2015), 359--371}
+ \cvitem{16.} {Della Pietra F., \textit{Some remarks on a shape optimization problem},
+\textbf{Kodai Math. J.} 37 (2014), 608-619}
+
+\cvitem{15.} {Della Pietra F., Gavitone N., \textit{Faber-Krahn
+    inequality for anisotropic eigenvalue problems with Robin boundary
+    conditions}, \textbf{Potential Analysis} 41, n.4 (2014), 1147-1166}
+\thispagestyle{empty}
+
+\cvitem {14.} {Della Pietra F., Gavitone N., \textit{Stability results for some fully nonlinear eigenvalue estimates}, \textbf{Communications in Contemporary Mathematics} 16 n.5 (2014), 1350039, 23pp.}
+   %   \verb+DOI:10.1142/S0219199713500399+.
+
+\cvitem{13.} {Della Pietra F., Gavitone N., \textit{Sharp bounds for the first eigenvalue and the torsional rigidity related to some
+    anisotropic operators}, \textbf{Mathematische Nachrichten}
+     287 (2014), 194-209}
+    %\verb+DOI:10.1002/mana.201200296+.
+
+\cvitem{12.} {Della Pietra F., Gavitone N., \textit{Upper bounds
+    for the eigenvalues of Hessian equations},
+    \textbf{Annali di Matematica Pura e Applicata},
+    193(3) (2014), 923-938}
+  %   \verb+DOI:10.1007/s10231-012-0307-5+.
+
+\cvitem{11.} {Della Pietra F., Gavitone N., \textit{Anisotropic  elliptic equations with general growth in the gradient and Hardy-type potentials},
+    \textbf{Journal of Differential Equations}, 255(11) (2013), 3788-3810}
+   % \verb+DOI:10.1016/j.jde.2013.07.019+.
+
+
+\cvitem{10.} {Della Pietra F., Gavitone N., \textit{Anisotropic elliptic problems involving Hardy-type potentials}, \textbf{Journal of Mathematical
+ Analysis and Applications}, 397(2) (2013), 800-813}
+
+\cvitem{9.} {Della Pietra F., Gavitone N., \textit{The relative isoperimetric inequality in the plane: the anisotropic case},
+ \textbf{Journal of Convex Analysis}, 20(1) (2013), 157-180}
+
+\cvitem{8.} {Della Pietra F., Gavitone N., \textit{Symmetrization for Neumann anisotropic problems and related questions}, \textbf{Advanced
+ Nonlinear Studies}, 12 (2012), 219-235}
+
+\cvitem {7.} {Della Pietra F., Peral I., \textit{Breaking of resonance for elliptic problems with strong degeneration at infinity},
+  \textbf{Communications in Pure and Applied Analysis}, 10(2) (2011),
+  593-612}
+
+\cvitem {6.} {Della Pietra F., di Blasio G., \textit{Comparison, existence and regularity results for a class of non--uniformly elliptic equations}, \textbf{Differential Equations and
+  Applications} 2 (2010), 79-103}
+
+\cvitem {5.} {Della Pietra F., di Blasio G., \textit{Existence and comparison results for non--uniformly parabolic problems},
+  \textbf{Mediterranean Journal of Mathematics}, vol. 7, n.3 (2010),
+  pp. 325-342}
+
+\cvitem {4.} {Della Pietra F., di Blasio G., \textit{Existence
+    results for nonlinear elliptic problems with unbounded
+    coefficients}, \textbf{Nonlinear Analysis: Theory, Methods \&
+  Applications}, vol. 71 (2009), 72-87}
+
+\cvitem{3.}{Della Pietra F., \textit{Risultati di esistenza per alcune classi di problemi ellittici nonlineari} [Existence results for some classes of nonlinear elliptic problems], \textbf{La Matematica nella
+  societ\`a e nella cultura} (1) 2 (2009), 231-234}
+
+\cvitem {2.} {Della Pietra F., \textit{Existence results for non--uniformly elliptic equations with general growth in the gradient}, \textbf{Differential and Integral Equations}, vol. 21 (2008),
+  821-836}
+\cvitem {1.} {Della Pietra F., \textit{Schwarz symmetrization in
+    nonlinear elliptic problems with lower-order terms}, \textbf{Ricerche di
+  Matematica}, vol. 54, fasc. 1 (2005), 165-183}
+
+\subsection{{Other Publications}}
+
+\cvitem{2011} {Della Pietra F., \textit{Problemi ellittici fortemente degeneri
+    all'infinito} [Strongly degenerate elliptic problems at infinity], proceedings XIX UMI congress, Bologna}
+\cvitem{2008} {Della Pietra F., \textit{Existence results for some
+    classes of nonlinear elliptic problems}, Ph.D. thesis}
+
+
+%\section{Bibliometrics (source: Scopus)}
+%\subsection{Period 2009-2024}
+%\cvline{}{
+%\begin{tabular}{|c|c|c|c|c|}
+%\hline \; Product Type \; & \; Number \; &\; Database \; &\; Start \;&\; End \;\\
+%\hline \; Articles (international) \; & 37 & Scopus & 2009 & 2024 \\
+%\hline Articles (national) & 1 & Scopus & 2009 & 2024 \\
+%\hline
+%\end{tabular}
+%}
+%\medskip
+%\cvline{}{
+%\begin{tabular}{|c|c|}
+%\hline  Total Citations (Scopus) & 351 \\
+%\hline  Average Citations per product (Scopus) \; &\; 9.24 \; \\
+%\hline Hirsch $(\mathrm{H})$ index (Scopus)\; & 13 \\
+%\hline \; Total Impact factor (Scopus+Clarivate) \; & 44.21 \\
+%\hline \; Average Impact factor per publication (Scopus+Clarivate) \; & 1.16 \\
+%\hline
+%\end{tabular}}
+
+%\subsection{Period 2014-2024}
+%\cvline{}{
+%\begin{tabular}{|c|c|c|c|c|}
+%\hline \; Product Type \; & \; Number \; &\; Database \; &\; Start \;&\; End \;\\
+%\hline \; Articles (international) \; & 30 & Scopus & 2014 & 2024 \\
+%\hline
+%\end{tabular}
+%}
+%\medskip
+%\cvline{}{
+%\begin{tabular}{|c|c|}
+%\hline  Total Citations (Scopus) & 259 \\
+%\hline  Average Citations per product (Scopus) \; &\; 8.63 \; \\
+%\hline Hirsch $(\mathrm{H})$ index (Scopus)\; & 10 \\
+%\hline \; Total Impact factor (Scopus+Clarivate) %\; & 37,57 \\
+%\hline \; Average Impact factor per publication (Scopus+Clarivate) \; & 1.25 \\
+%\hline
+%\end{tabular}}
+
+\section{Participation in Conference Organizing Committees}
+\cvitem{2024}{III Lecce-Napoli-Salerno meeting, Pontanian Academy (Naples), February 26-27, 2024. % Workshop organized in collaboration with R. Carlone (Naples Federico II)
+}
+\cvitem{2022} {Geometric properties of PDEs, minisymposium within the 45eme Congr\`es National d'Analyse Num\'erique (SMAI), Evian-les-Bains (France) June 13-17, 2022 % (in collaboration with F. Chiacchio and C. Nitsch)
+}
+\cvitem{2019}  {Shape optimization, control and inverse problems for PDEs, INDAM intensive period May-July 2019. %Organizing committee P. Cannarsa, G. Floridia, A. Mercaldo, C. Nitsch, C. Trombetti, E. Zuazua. Local organizers F. Della Pietra, N. Gavitone, F. Piccialli
+}
+\cvitem{2016}  {Geometric aspects of PDEs and functional inequalities, Cortona (AR), Italy, April 28-30, 2016. %(Workshop organized in collaboration with N. Gavitone (Naples Federico II) and C. Bianchini (Florence)
+}
+
+
+\section*{Coordination and Participation in Research Groups and Centers}
+
+\subsection*{Research Projects and Funding Received}
+%\cvitem{15.4.2021--14.4.2023}
+\cvitem{2021}{\textbf{Fellow}, DAAD -- \textit{Shape optimization problems in spectral theory}}
+\cvitem{2021-2023}{\textbf{Proponent} of the biennial project 2020 Line B (University Research Fund) Degenerate functionals, funded}
+\cvitem{{2018-2020}}{\textbf{Recipient} of the Fund for Financing Basic Research Activities (FFABR 2017)}
+\cvitem{2015}{\textbf{Coordinator} of the GNAMPA project Geometric and analytical aspects of partial differential equations and functional inequalities (INDAM), funded}
+\cvitem{}{\underline{\textbf{Participant} in funded research projects:}}
+ \cvitem{2025}{ {GNAMPA}  Singular and degenerate problems: existence, uniqueness and analysis of the qualitative properties of solutions
+ }
+ \cvitem{2024}{ {GNAMPA}  Existence, uniqueness and regularity of solutions for singular problems
+ }
+
+  \cvitem{2023}{PRIN PNRR 2022 Project Linear and Nonlinear PDE’s: New directions and Applications %(National coordinator Prof. C. Trombetti)
+  }
+ \cvitem{2023}{ {GNAMPA}  Variational methods and PDEs for anisotropic problems%, scientific responsible Prof. G. Riey (Calabria)
+ }
+ \cvitem{2022}{ {GNAMPA}  Analysis of wetting phenomena in the presence of singular potentials%,
+%scientific responsible Dr. R. Durastanti (Naples Federico II)
+}
+\cvitem{2019-2023}{ {PRIN} 2017 - south line, Qualitative and quantitative aspects of nonlinear PDEs (19.08.2019--18.08.2023)}
+%, P.I. Prof. B. Sciunzi (Calabria)}
+ \cvitem{2017}{GNAMPA  Eigenvalues of the generalized $p$-Laplacian and asymptotic properties of the trace operator}%,P.I. Prof. H. Kova\v r\'ik (Brescia)}
+\cvitem{2016}{ {GNAMPA}  Quantitative and qualitative properties of solutions to
+elliptic and parabolic equations%, P.I.
+%Dr. A. Alberico (CNR)
+}
+\cvitem{2014--2017}{ {FIRB} 2013 Geometrical and qualitative aspects of PDEs%, P.I. E. Berchio (Polytechnic University of Turin)
+}
+\cvitem{2013}{ {GNAMPA} Functional inequalities
+        and overdetermined problems%, P.I. Prof. C. Nitsch (Naples Federico II)
+  }
+\cvitem{2014--2017}{ {PRiN MiUR} 2012  Partial differential equations of elliptic and parabolic type: geometric aspects, related inequalities, and applications%, P.I. Prof. A. Cianchi (Florence), duration 36 months
+}
+\cvitem{2010--2012} { {PRiN MiUR} 2008 Properties of solutions to
+        partial differential equations and functional inequalities:
+        symmetrization and related methods%, P.I. Prof. A. Cianchi (Florence), duration 24 months
+  }
+\cvitem{2007--2009} { {ITALY-SPAIN INTEGRATED ACTIONS}: Critical diffusion problems, their stationary states and applications}
+\cvitem{2006} { {GNAMPA} Nonlinear partial differential equations of elliptic and parabolic type:
+        existence and uniqueness of solutions%, scientific responsible Prof. V. Ferone (Naples Federico II)
+  }
+\cvitem{2005}{ Campania Region (Regional Law 5/02)
+        Nonlinear equations of elliptic and parabolic type:
+        existence, uniqueness and regularity%, scientific responsible Prof. A. Mercaldo (Naples Federico II)
+  }
+
+
+\section*{Managerial, Organizational, and Service Activities}
+\subsection{{Academic Representation Activities}}
+\cvitem{}{\underline{University of Naples Federico II}}
+\cvitem{01.2024--} {\textbf{Coordinator} of the Master's Degree Program in Mathematics (LM-40)}
+\cvitem{} {\textbf{Member} of departmental committees:}
+\cvitem{01.2024--} {VQR 2020-2024 committee of the Department of Mathematics and Applications}
+\cvitem{02.2021--} {Teaching committee of the Department of Mathematics and Applications}
+\cvitem{01.2021--12.2024} {Subject expert ("cultori della materia") committee of the Department of Mathematics and Applications}
+\cvitem{01.2019--} {VQR 2015-2019 committee of the Department of Mathematics and Applications}
+\cvitem{01.2019--} {Web committee of the Department of Mathematics and Applications}
+\cvitem{}{\textbf{Contact Person}:}
+\cvitem{06.2020--} {for the timetable computerization system for the PSB School}
+\cvitem{01.2019--} {for the IRIS-Cineca platform, for the Department of Mathematics and Applications}
+\cvitem{01.2019--} {for the CRUI-UniBas platform, for the Department of Mathematics and Applications}
+\cvitem{2019--2023} {for the teaching activities of the Mathematical Analysis and Geometry and Algebra lecturers of the Department of Mathematics and Applications assigned to the degree courses of the Dept. of Industrial Engineering}
+%\cvitem{03.2016--08.2018}
+\cvitem{2016-2018}{Researchers' Representative on the Department Board and in the PSB School Council}
+%\cvitem{12.2014--02.2016}
+\cvitem{2014-2016}{Researchers' Representative on the Department Board and in the PSB School Council}
+
+\cvitem{}{\underline{University of Molise}}
+
+\cvitem{2012--2013} {Member of the teaching committee for the Department of Biosciences and Territory}
+\cvitem{2009--2012} {Member of the teaching committee for the Faculty of Engineering}
+\subsection*{Member of Competition Committees}
+\cvitem{27/1/2026}{Examination committee for the awarding of the Ph.D. in Mathematical Models for Engineering, Electromagnetism and Nanosciences, Sapienza University of Rome}
+\cvitem{5/2023} {Assignment of DAAD research grants (Research Stays for University Academics and Scientists)}
+\cvitem{3/2023} {Research grant (University of Milan)}
+\cvitem{11/2022}{Assignment of supplementary teaching positions, as "Senior Tutor", for the teaching needs of Degree Courses of the P.S.B. School (Naples Federico II)}
+\cvitem{5/2022} {Research grant, Department of Mathematics and Applications (Naples Federico II)}
+\cvitem{4/2022} {Research grant, Department of Mathematics and Applications (Naples Federico II)}
+\cvitem{1/2022} {Research grant, Department of Mathematics and Applications (Naples Federico II, chair)}
+\cvitem{2021} {Type A researcher (Polytechnic University of Milan)}
+\cvitem{2015} {Research grant, Department of Mathematics and Applications (Naples Federico II)}
+\cvitem{2014} {Research grant, Department of Mathematics and Applications (Naples Federico II)}
+\cvitem{2019--2024} {Assignment of teaching positions for Degree Courses of the P.S.B. School (Naples Federico II)}
+%affidamento di incarichi di insegnamento per le esigenze dei corsi di studio della Scuola PSB (Napoli Federico II)
+
+\cvitem{13.12.2019}{Examination committee for the awarding of the Ph.D. in Mathematics, Physics and Applications to Engineering, XXXII cycle, University of Campania "L. Vanvitelli"}
+\cvitem{A.Y. 2018/19}{Internship committee, written and oral exams and ranking formation - ZODIACO V Competition (Pozzuoli Air Force Academy)}
+
+
+\subsection{Refereeing Activity}
+%\cvitem{2005--} {Referee for international journals: Communications in PDEs, Advances in Calculus of Variations, Mathematical Methods in Applied Sciences, Journal of Functional Analysis, Annali di Matematica Pura e Applicata, Journal of Geometric Analysis, Communications in Contemporary Mathematics, Transactions AMS, Mathematica Bohemica, Canadian Journal of Mathematics, Mathematische Annalen, Potential Analysis, Communications in PDEs, Proceedings of the Royal Society of Edinburgh, Mathematische Nachrichten,  Kodai Mathematical Journal, Mediterranean Journal of Mathematics,  Monatshefte f\"ur Mathematik, Springer Proceedings in Mathematics and Statistics, Journal of Function Spaces, Annales Polonici Mathematici, Complex Variables and Elliptic Equations, Vietnam Journal of Mathematics, Journal of Fixed Point Theory and Applications, Ricerche di Matematica, Demonstratio Mathematica, Journal of Computational and Applied Mathematics, Mathematics in Engineering, Nonlinear Analysis, Revista Matematica Iberoamericana}
+\cvitem{2005--} {Referee for international journals: J. Optim. Theory Appl., Calc. Var. PDE, Annali SNS, Arabian J. Math., Adv. Cont. Discr. Models, Arkiv der Math., Comm. PDEs, Rev. R. Acad. Cienc. Exactas Fis. Nat., Adv. Calc. Var., Math. Methods in Appl. Sciences, J. Functional Anal., Ann. Matematica Pura Appl., J. Geometric Anal., Comm. Contemporary Math., Trans. AMS, Math. Bohemica, Canadian J. Math., Math. Ann., Potential Anal., Proc. Royal Soc. Edinburgh, Math. Nachrichten, Kodai Math. J., Mediterranean J. Math., Monatshefte Math., Springer Proc. Math. Statistics, J. Funct. Spaces, Ann. Polonici Math., Complex Var. Elliptic Eq., Vietnam J. Math., J. Fixed Point Theory Appl., Ricerche Mat., Demonstratio Math., J. Computational and Appl. Math., Math. Engineering, Nonlinear Anal., Rev. Mat. Iberoamericana}
+\cvitem{2020}{Reviewer for research grant funding proposals - MiUR}
+\cvitem{2015}{Reviewer of {FIRB MiUR} projects}
+\cvitem{2005--}{Reviewer for MathSciNet of the American Mathematical Society}
+
+%\needspace{4\baselineskip}
+\section{Additional Information}
+\cvitem{2004--} {Member of the National Group for Mathematical Analysis, Probability and their Applications (GNAMPA) of the National Institute of Higher Mathematics (INDAM)}
+\cvitem{2004--} {Member of the Italian Mathematical Union (UMI) since 2004}
+
+\needspace{4\baselineskip}
+\subsection{Language Skills}
+%\cvitemwithcomment{Italian}{Native Speaker}{}
+\cvitemwithcomment{Italian}{Native Speaker}{}
+\cvitemwithcomment{English}{Fluent (Excellent written and oral knowledge)}{}
+
+\vfill
+\begin{flushright}
+Naples, \today
+\end{flushright}
+
+\emptysection{}\closesection
+\vfill
+\begin{center}
+\textit{\scriptsize The undersigned Francesco Della Pietra, born in Naples on 12.04.1981, aware of the penal sanctions provided for in case of false declaration, pursuant to art. 76 of D.P.R. 445/2000 and subsequent amendments, declares that the information stated in this curriculum vitae is true.}
+\end{center}
+
+\end{document}
